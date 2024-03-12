@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter , Routes , Route } from 'react-router-dom';
+import AddTask from './Composants/AddTask';
+import UpdatTask from './Composants/UpdateTask';
+import ListTasks from './Composants/ListTasks';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{paddingLeft :40}}>
+      <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<ListTasks />}/>
+        <Route path='/add-task' element={<AddTask />}/>
+        <Route path='/update-task/:id' element={<UpdatTask />}/>
+
+      </Routes>
+      </BrowserRouter>
     </div>
   );
 }
