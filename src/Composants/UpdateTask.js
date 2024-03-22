@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { updateTaskAction } from "../Config/action";
+import { updateTaskAction } from "../reducer/todo/action";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import "./Style/UpdateTask.css";
+import "./style/UpdateTask.css";
 
 function UpdateTask() {
   const { id } = useParams();

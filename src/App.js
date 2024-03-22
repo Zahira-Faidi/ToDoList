@@ -1,8 +1,7 @@
-import './App.css';
 import { BrowserRouter , Routes , Route } from 'react-router-dom';
-import AddTask from './Composants/AddTask';
-import UpdatTask from './Composants/UpdateTask';
-import ListTasks from './Composants/ListTasks';
+import AddTask from './composants/AddTask';
+import UpdatTask from './composants/UpdateTask';
+import ListTasks from './composants/ListTasks';
 
 function App() {
   return (

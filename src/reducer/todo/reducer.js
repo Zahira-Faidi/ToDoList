@@ -1,3 +1,5 @@
+import { ADD_TASK, DELETE_TASK, UPDATE_TASK } from "./action";
+
 const initialState = {
     tasks: [
         { id: 1, title: "Task 1", completed: "false" },
@@ -6,9 +8,9 @@ const initialState = {
 };
 const reducer = (state = initialState, action) => {
     switch (action.type) {
-        case "Add_task":
+        case ADD_TASK:
             return { ...state, tasks: [...state.tasks, action.payload] }
-        case "Update_task":
+        case UPDATE_TASK:
 
             const task = state.tasks.find((u) => u.id === parseInt(action.payload.id))
             if (task) {
@@ -16,7 +18,7 @@ const reducer = (state = initialState, action) => {
                 task.completed = action.payload.completed
             }
             return state
-        case "Delete_task":
+        case DELETE_TASK:
             return { ...state, tasks: [...state.tasks.filter((u) => u.id !== parseInt(action.payload))] }
         default:
             return state

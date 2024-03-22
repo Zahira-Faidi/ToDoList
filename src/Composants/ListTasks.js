@@ -1,8 +1,8 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { deleteTaskAction } from "../Config/action";
-import "./Style/ListTasks.css"; 
+import { deleteTaskAction } from "../reducer/todo/action";
+import "./style/ListTasks.css"; 
 
 function ListTasks() {
     const tasks = useSelector((data) => data.tasks);

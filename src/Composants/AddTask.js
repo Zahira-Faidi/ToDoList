@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addTaskAction } from "../Config/action";
+import { addTaskAction } from "../reducer/todo/action";
 import { useNavigate } from "react-router-dom";
-import "./Style/AddTask.css"; 
+import "./style/AddTask.css"; 
 
 function AddTask() {
   const count = useSelector((data) => data.tasks.length);
